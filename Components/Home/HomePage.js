@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, StatusBar } from 'react-native'
 import Animation from '../helpers/Animation'
 import Buttons from '../helpers/Buttons'
 
@@ -8,7 +8,9 @@ const styles = StyleSheet.create(
             flex: 1,
             padding: 10,
             backgroundColor: "black",
-            // backgroundColor: "pink",
+        },
+        safeArea: {
+            flex: 1,
             justifyContent: 'center',
             alignItems: 'center'
         },
@@ -28,14 +30,17 @@ export default function HomePage(){
     return(
         <>
             <View style = { styles.outerView }>
-                <Animation />
-                <View>
-                    <Text style = { styles.mainHeading } > STONKS </Text>
-                    <View style = { styles.lowerSection } >
-                        <Buttons style={{backgroundColor: '#3EA7B5'}} content = 'SIGN-IN' />
-                        <Buttons style= {{backgroundColor: '#3EA7B5'}} content = 'SIGN-OUT'/>
+                <SafeAreaView style = { styles.safeArea }>
+                <StatusBar barStyle={'light-content'}/>
+                    <Animation />
+                    <View>
+                        <Text style = { styles.mainHeading } > STONKS </Text>
+                        <View style = { styles.lowerSection } >
+                            <Buttons style={{backgroundColor: '#3EA7B5'}} content = 'SIGN-IN' />
+                            <Buttons style= {{backgroundColor: '#3EA7B5'}} content = 'SIGN-OUT'/>
+                        </View>
                     </View>
-                </View>
+                </SafeAreaView>
             </View>
         </>
     )
