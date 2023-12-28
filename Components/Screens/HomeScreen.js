@@ -23,16 +23,15 @@ const styles = StyleSheet.create(
 )
   
 
-export default function HomeScreen(){
+export default function HomePage(){
     return(
         <>
             <View style = { styles.outerView }>
-                <HomeAnimation />
                     <View>
                         <Text style = { styles.mainHeading } > STONKS </Text>
                         <View style = { styles.lowerSection } >
-                            <Buttons style={{backgroundColor: '#3EA7B5'}} content = 'SIGN-IN' />
-                            <Buttons style= {{backgroundColor: '#3EA7B5'}} content = 'SIGN-OUT'/>
+                            <Buttons btnColor = '#3EA7B5' content = 'SIGN-IN' />
+                            <Buttons btnColor = "#3EA7B5" content = 'SIGN-OUT'/>
                         </View>
                     </View>
             </View>
