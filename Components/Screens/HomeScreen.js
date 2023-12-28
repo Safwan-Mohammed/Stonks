@@ -28,8 +28,8 @@ export default function HomePage(){
                     <View>
                         <Text style = { styles.mainHeading } > STONKS </Text>
                         <View style = { styles.lowerSection } >
-                            <Buttons style={{backgroundColor: '#3EA7B5'}} content = 'SIGN-IN' />
-                            <Buttons style= {{backgroundColor: '#3EA7B5'}} content = 'SIGN-OUT'/>
+                            <Buttons btnColor = '#3EA7B5' content = 'SIGN-IN' />
+                            <Buttons btnColor = "#3EA7B5" content = 'SIGN-OUT'/>
                         </View>
                     </View>
             </View>

@@ -1,20 +1,34 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { setStatusBarBackgroundColor } from 'expo-status-bar'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
 
-export default function Buttons({ style, content }){
+export default function Buttons({ btnColor, content, onPress }){
+    const handlePress = () => {
+        console.log("Button pressed")
+        console.log(btnColor)
+    }
     return(
-        <View style = {[styles.button, style]}>
+        <Pressable
+            onPress = {onPress}
+            style = {({ pressed }) => ([
+                {backgroundColor: pressed ? 'yellow' : btnColor},
+                styles.button
+            ])}
+        >
             <Text style = {styles.text}>{content}</Text>
-        </View>
+        </Pressable>
     )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({  
     button:{
         height: 'auto',
         width: 'auto',
         borderRadius: 15,
         padding: 10
     },
+    // button_active:{
+
+    // },
     text:{
         fontSize: 21,
         fontWeight: 'bold',
