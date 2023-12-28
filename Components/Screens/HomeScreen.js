@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, SafeAreaView, StatusBar } from 'react-native'
+import { View, Text, StyleSheet, Animated } from 'react-native'
+import HomeAnimation from '../helpers/HomeAnimation'
 import Buttons from '../helpers/Buttons'
 
 const styles = StyleSheet.create(
@@ -20,11 +21,13 @@ const styles = StyleSheet.create(
         }
     }
 )
+  
 
-export default function HomePage(){
+export default function HomeScreen(){
     return(
         <>
             <View style = { styles.outerView }>
+                <HomeAnimation />
                     <View>
                         <Text style = { styles.mainHeading } > STONKS </Text>
                         <View style = { styles.lowerSection } >
